@@ -14,6 +14,11 @@ namespace BulkyBookWeb.Controllers
         }
         public IActionResult Index()
         {
+            //Descending Order
+            //var obCategoryList = from cat in _db.Categories select cat;
+            //obCategoryList = obCategoryList.OrderByDescending(cat => cat.Id);
+
+
             IEnumerable<Category> obCategoryList = _db.Categories;
             return View(obCategoryList);
         }
